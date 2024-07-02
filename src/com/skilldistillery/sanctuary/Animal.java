@@ -16,7 +16,6 @@ public class Animal {
 	}
 	public int eat(int randomFoodAmount) {
 		
-		 System.out.println("I'm eating " + randomFoodAmount +  " foods");
 		return randomFoodAmount;
 	}
 	

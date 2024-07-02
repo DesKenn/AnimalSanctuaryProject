@@ -5,19 +5,18 @@ public class Sanctuary {
 	// FIELDS
 	Animal[] animals = new Animal[5];
 	Attendant attendant = new Attendant();
-
-		
-			Animal dog = new Dog();
-		Animal leopard = new Leopard();
-		Animal deer = new Deer();
-		Animal ferret = new Ferret();
-		Animal giraffe = new Giraffe();
-	
 		
 	
 
-	// METHODS
-
+	
+//CONSTRUCTOR
+	public Sanctuary() {
+			super();
+			this.animals = animals;
+			this.attendant = attendant;
+//		
+		}
+// METHODS
 	/*
 	 * Assigns attendant object to attendant field. If called, an attendant will be
 	 * added to the sanctuary.
@@ -33,10 +32,7 @@ public class Sanctuary {
 	public void listAnimals() {
 		
 
-	animals[0] = dog;
-		animals[1] = deer;
-		animals[2] = leopard;
-	
+
 
 	
 		
@@ -61,8 +57,6 @@ public class Sanctuary {
 		for (int i = 0; i < animals.length; i++) {
 			if (animals[i] == null) { 
 				animals[i] = newAnimal;
-				System.out.println(newAnimal.getName());
-				animals[3] = newAnimal;
 					listAnimals();
 					
 			

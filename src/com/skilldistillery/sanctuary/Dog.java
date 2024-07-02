@@ -9,13 +9,13 @@ public class Dog extends Animal {
 		super.makeNoise();
 		System.out.println(noise);
 	}
-	@Override
-    public String getName() {
-        return "Scrappy";
-    }
+
 	@Override
 	public int eat(int randomFoodAmount) {
-		return super.eat(randomFoodAmount);
+		 System.out.println("I love eating " + randomFoodAmount+ " bones"); ;
+		return randomFoodAmount;
+
+		
 	}
 
 }

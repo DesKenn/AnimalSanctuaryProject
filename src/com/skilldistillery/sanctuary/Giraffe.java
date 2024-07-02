@@ -1,7 +1,7 @@
 package com.skilldistillery.sanctuary;
 
 public class Giraffe extends Animal{
-	private static String noise = " he he he";
+	private static String noise = " he he he ";
 
 	@Override
 	public void makeNoise() {
@@ -9,13 +9,10 @@ public class Giraffe extends Animal{
 		super.makeNoise();
 		System.out.println(noise);
 	}
-//	@Override
-//    public String getName() {
-//        return "Gerry";
-//    }
+
 	@Override
-	public int eat(int amount) {
-		// TODO Auto-generated method stub
-		return super.eat(amount);
+	public int eat(int randomFoodAmount) {
+		System.out.println("I love eating " + randomFoodAmount+ " greens"); ;
+		return eat(randomFoodAmount);
 	}
 }

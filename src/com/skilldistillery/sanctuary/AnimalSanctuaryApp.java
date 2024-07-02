@@ -29,68 +29,46 @@ public class AnimalSanctuaryApp {
 			System.out.println("4. Quit ");
 
 			int userChoice = kb.nextInt();
-			Animal newAnimal = new Animal();
 			switch (userChoice) {
 			case 1:
 				sanctuary.listAnimals();
 				break;
 			case 2:
 
-				System.out.println("Enter 1 to add a ferret OR enter 2 to add a giraffe.");
+	
+	
+				System.out.println("Enter 1 to add a ferret, 2 to add a giraffe OR 3 to add a dog.");
 				int animalType = kb.nextInt();
-				switch (animalType) {
-				case 1:
-				case 2:
-					System.out.println("What is their name?");
-					String animalName = kb.next();
-					if (newAnimal != null) {
-						newAnimal.setName(animalName);
-						sanctuary.addAnimal(newAnimal);
 
-					}
+				System.out.println("What is their name?");
+				String animalName = kb.next();
+				Animal newAnimal;
+
+				switch (animalType) {
+
+				case 1:
+					newAnimal = new Ferret();
+					newAnimal.setName(animalName);
+
+					sanctuary.addAnimal(newAnimal);
+					break;
+				case 2:
+					newAnimal = new Giraffe();
+					newAnimal.setName(animalName);
+
+					sanctuary.addAnimal(newAnimal);
+					break;
+				case 3:
+					newAnimal = new Dog();
+					newAnimal.setName(animalName);
+					
+					sanctuary.addAnimal(newAnimal);
 					break;
 				default:
-					System.out.println("Please pick 1 or 2.");
+					System.err.println("Please pick 1, 2, or 3 to add an animal.");
 					break;
-
 				}
-
 				break;
-				
-				/*
-				 * 	System.out.println("Enter 1 to add a ferret OR enter 2 to add a giraffe.");
-				int animalType = kb.nextInt();
-				switch (animalType) {
-				case 1: 
-					System.out.println("What is their name?");
-					String animalName = kb.next();
-					animalName.setName(sanctuary.animals[3]);
-				
-				break;	
-				case 2:
-					System.out.println("What is their name?");
-				String animalName = kb.next();
-				animalName.setName(sanctuary.animals[4]);
-				
-				break;
-				if (newAnimal != null) {
-					newAnimal.setName(animalName);
-					sanctuary.addAnimal(newAnimal);
-
-				}
-					
-					default: System.out.println("Please pick 1 or 2.");
-					break;
-
-				}
-				
-
-				
-
-				break;
-
-				 */
-
 			case 3:
 				sanctuary.listAnimals();
 				System.out.println();

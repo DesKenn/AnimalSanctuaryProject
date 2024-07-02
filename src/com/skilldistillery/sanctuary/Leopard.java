@@ -11,15 +11,12 @@ public class Leopard extends Animal{
 		super.makeNoise();
 		System.out.println( noise);
 	}
-	@Override
-    public String getName() {
-        return "Leo";
-    }
+
 
 	@Override
 	public int eat(int randomFoodAmount) {
-		// TODO Auto-generated method stub
-		return super.eat(randomFoodAmount);
+		System.out.println("I love eating " + randomFoodAmount+ " piece of grass"); ;
+		return randomFoodAmount;
 	}
 
 	
